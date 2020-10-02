@@ -3,25 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modul 1 JavaScript Fundamentals</title>
+    <title>Modul 1 JavaScript Fundamentals Av Charlotte Holst</title>
   </head>
   <body>
     <h1>JavaScript Fundamentals Modul 1</h1>
     <script>
       /* Uppgift 1
          Deklarera 3 olika variabler med var, let och const. Valfri namngivning och type. */
-      var varnr1 = "Text";
-      let varnr2 = 5;
+      var varNr1 = "Text";
+      let varNr2 = 5;
       const varnr3 = "siffran 5";
 
       /*Uppgift 2
         Deklarera 5 variabler med let. De ska ha typerna: Boolean, Number, String, Object och Array. Valfria värden.*/
 
       let bool = true;
-      let num1 = 5;
-      let strinoftext = "texten hamnar här";
-      let obj1 = { catname: "Mjauf", age: 5 };
-      let arr1 = [4, 6, 5, 55];
+      let number1 = 5;
+      let strinOfText = "texten hamnar här";
+      let object1 = { catname: "Mjauf", age: 5 };
+      let array1 = [4, 6, 5, 55];
 
       /*Uppgift 3
         Definiera en funktion som returnerar summan av två värden. De två värdena ska vara parametrar till funktionen.
@@ -29,40 +29,40 @@
         Det returnerade värdet från funktionen ovan ska sparas i en ny variabel kallad 'sum' (utanför funktionen)
         Logga ut i konsolen: "Summan blir: xxx", där xxx är värdet av variabeln 'sum'.*/
 
-      function myfunk(value1, value2) {
+      function myFunction(value1, value2) {
         return value1 + value2;
       }
-      let sum = myfunk(2, 5);
+      let sum = myFunction(2, 5);
       console.log("Summan blir: ", sum);
 
       /*Uppgift 4
         Logga ut nuvarande datum och tid.*/
 
-      let date1 = new Date();
-      console.log(date1);
+      let todaysDate = new Date();
+      console.log(todaysDate);
 
       /*Uppgift 5
         Deklarera ett objekt som innehåller 3 properties (valfria värden) och en metod som loggar de 3 egenskaperna i konsolen.
         Exekvera metoden som finns på objektet.*/
 
-      let dog1 = {
-        dogname: "Billy",
+      let dog = {
+        dogName: "Billy",
         birthyear: 2005,
         race: "Border collie",
-        info1: function () {
+        info: function () {
           console.log(
             "The dogs name is " +
-              dog1.dogname +
+              dog.dogName +
               " and he's born " +
-              dog1.birthyear +
+              dog.birthyear +
               "." +
               " He's a " +
-              dog1.race +
+              dog.race +
               "."
           );
         },
       };
-      dog1.info1();
+      dog.info();
 
       /*Uppgift 6
       - Definiera en array som innehåller värdena 4, 8, 15, 16, 23 och 42 och logga ut den i konsolen.
@@ -70,25 +70,25 @@
       - Filtrera arrayen så att du får en ny array med endast värden lägre än 20.
       - På resultatet av föregånde operation, använd 'map' för att dubblera alla värden.
       - På resultatet av föregånde operation, använd 'forEach' för att logga ut alla värden vad för sig.*/
-      let arr11 = [4, 8, 15, 16, 23, 42];
-      console.log(arr11);
+      let myArray = [4, 8, 15, 16, 23, 42];
+      console.log(myArray);
 
-      console.log(arr11[5]);
+      console.log(myArray[5]);
 
-      let filter1 = arr11.filter(filtrera);
+      let filterArray = myArray.filter(filtrera);
       function filtrera(twenty) {
         return twenty < 20;
       }
-      console.log(filter1);
+      console.log(filterArray);
 
-      let mapping = filter1.map(map1);
-      function map1(dubbel) {
-        return dubbel * 2;
+      let mapping = filterArray.map(mapMyArray);
+      function mapMyArray(dubbelArrayNumbers) {
+        return dubbelArrayNumbers * 2;
       }
       console.log(mapping);
 
-      mapping.forEach(function (eachfunk) {
-        console.log(eachfunk);
+      mapping.forEach(function (eachFunction) {
+        console.log(eachFunction);
       });
 
       /* Uppgift 7
